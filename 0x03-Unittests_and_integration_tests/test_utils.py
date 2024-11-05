@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" 
+"""
     Parameterize a unit test
 """
 import unittest
@@ -11,7 +11,7 @@ from parameterized import parameterized
 
 
 class TestAccessNestedMap(unittest.TestCase):
-    """ 
+    """
         first unit test for utils.access_nested_map
     """
     @parameterized.expand([
@@ -65,7 +65,7 @@ class TestGetJson(unittest.TestCase):
         moke_requests_get.return_value.json.return_value = test_payload
         result = get_json(test_url)
         self.assertEqual(result, test_payload)
-        moke_requests_get.assert_called_once_with(test_url)        
+        moke_requests_get.assert_called_once_with(test_url)
 
 
 class TestMemoize(unittest.TestCase):
